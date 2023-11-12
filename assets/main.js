@@ -178,6 +178,6 @@ function updateChart() {
 }
 
 const h1 = document.querySelector("h1");
-h1.insertAdjacentElement("beforebegin", table3);
+h1.insertAdjacentElement("afterend", table3);
 
 updateChart();
