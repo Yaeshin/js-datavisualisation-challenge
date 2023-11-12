@@ -1,5 +1,3 @@
-import Chart from 'chart.js/auto'
-
 let canvas1 = document.createElement("canvas");
 let canvas2 = document.createElement("canvas");
 let chart1 = document.getElementById("table1");
@@ -155,10 +153,8 @@ const chart3Setup = {
 
 const graph3 = new Chart(context3, chart3Setup);
 function updateChart() {
-  const xstart =
-    data3.length > 0 ? data3[data3.length - 1].x + 1 : 1;
-  const ystart =
-    data3.length > 0 ? data3[data3.length - 1].y : 0;
+  const xstart = data3.length > 0 ? data3[data3.length - 1].x + 1 : 1;
+  const ystart = data3.length > 0 ? data3[data3.length - 1].y : 0;
   fetch(
     `https://canvasjs.com/services/data/data3.php?xstart=${xstart}&ystart=${ystart}`
   )
