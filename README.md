@@ -31,7 +31,7 @@ Install from `npm` or `yarn`
 ### Clone Locally
 
 ```bash
->  git clone git@github.com:yaeshin/plant-clicker.git
+>  git clone git@github.com:Yaeshin/js-datavisualisation-challenge.git
 ```
 
 ### Install with npm
