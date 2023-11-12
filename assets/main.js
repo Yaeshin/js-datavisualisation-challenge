@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
           label: labels[index],
           data: countryData,
           fill: false,
-          borderColor: "rgb(0,0,0)",
+          borderColor: getRandomColor(),
         })),
       },
       options: {
@@ -111,6 +111,15 @@ new Chart(context2, {
     },
   },
 });
+
+function getRandomColor() {
+  const letters = "0123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
 
 let table3 = document.createElement("canvas");
 table3.id = "graph3";
