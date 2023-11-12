@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let values = rows[i].getElementsByTagName("td");
     let countriesData = [];
 
-    for (let j=2; j<values.length; j++) {
+    for (let j=1; j<values.length; j++) {
       let value = parseFloat(values[j].innerText.replace(",", "."));
       countriesData.push(value);
     }
@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
           "2009",
           "2010",
           "2011",
+          "2012"
         ],
         datasets: data.map((countryData, index) => ({
           label: labels[index],
