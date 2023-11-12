@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let tBodies = tables.getElementsByTagName("tbody")[0];
   let rows = tBodies.getElementsByTagName("tr");
 
-  for (let i=0; i<rows.length; i++) {
+  for (let i=1; i<rows.length; i++) {
     let countries = rows[i].getElementsByTagName("td")[0].innerText;
     labels.push(countries);
     let values = rows[i].getElementsByTagName("td");
@@ -136,7 +136,7 @@ const chart3Setup = {
         data: data3,
         fill: false,
         borderColor: "rgb(0,0,0)",
-        tension: 0.2,
+        tension: 0.125,
       },
     ],
   },
