@@ -7,9 +7,9 @@ canvas2.setAttribute("id", "graph2");
 let ContainerTable = document.getElementById("mw-content-text");
 ContainerTable.insertBefore(canvas1, chart1);
 ContainerTable.insertBefore(canvas2, chart2);
-canvas1.width = 1000; 
+canvas1.width = 800; 
 canvas1.height = 600; 
-canvas2.width = 1000; 
+canvas2.width = 800; 
 canvas2.height = 600; 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let tBodies = tables.getElementsByTagName("tbody")[0];
   let rows = tBodies.getElementsByTagName("tr");
 
-  for (let i=1; i<rows.length; i++) {
+  for (let i=0; i<rows.length; i++) {
     let countries = rows[i].getElementsByTagName("td")[0].innerText;
     labels.push(countries);
     let values = rows[i].getElementsByTagName("td");
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const mygraph2 = document.getElementById("table2");
 
 let dataGraph2 = [];
-for (let i=1; i<mygraph2.rows.length; i++) {
+for (let i=0; i<mygraph2.rows.length; i++) {
   const rowData = mygraph2.rows[i].cells;
   const object = {
     "N°": rowData[0].innerText.trim(),
