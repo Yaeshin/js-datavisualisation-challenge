@@ -164,7 +164,7 @@ function updateChart() {
   const xstart = data3.length > 0 ? data3[data3.length - 1].x + 1 : 1;
   const ystart = data3.length > 0 ? data3[data3.length - 1].y : 0;
   fetch(
-    `https://canvasjs.com/services/data/data3.php?xstart=${xstart}&ystart=${ystart}`
+    `https://canvasjs.com/services/data/datapoints.php?xstart=${xstart}&ystart=${ystart}`
   )
     .then(response => response.json())
     .then(data => {
