@@ -49,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
           "2009",
           "2010",
           "2011",
-          "2012",
         ],
         datasets: data.map((countryData, index) => ({
           label: labels[index],
@@ -68,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const mygraph2 = document.getElementById("table2");
 
 let dataGraph2 = [];
-for (let i=0; i<mygraph2.rows.length; i++) {
+for (let i=1; i<mygraph2.rows.length; i++) {
   const rowData = mygraph2.rows[i].cells;
   const object = {
     "N°": rowData[0].innerText.trim(),
@@ -136,7 +135,7 @@ const chart3Setup = {
         data: data3,
         fill: false,
         borderColor: "rgb(0,0,0)",
-        tension: 0.125,
+        tension: 0.2,
       },
     ],
   },
@@ -178,7 +177,7 @@ function updateChart() {
     });
 }
 
-const h1Element = document.querySelector("h1");
-h1Element.insertAdjacentElement("beforebegin", table3);
+const h1 = document.querySelector("h1");
+h1.insertAdjacentElement("beforebegin", table3);
 
 updateChart();
