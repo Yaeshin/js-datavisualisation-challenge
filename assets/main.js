@@ -146,13 +146,13 @@ const chart3Setup = {
         position: "bottom",
         title: {
           display: true,
-          text: "X-Axis",
+          text: "Time",
         },
       },
       y: {
         title: {
           display: true,
-          text: "Y-Axis",
+          text: "Crimes",
         },
       },
     },
